@@ -30,8 +30,12 @@ public class LinkedHashMapDemo {
         hashMap.put("Bob", 80);
         hashMap.put("Akshit", 78);
 
+//        for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
+//            System.out.println(entry.getKey() + ": " + entry.getValue());
+//        }
+
         Integer res = hashMap.getOrDefault("Vipul", 0);
-        hashMap.put("Shubham", 92);
+        hashMap.putIfAbsent("Shubham", 92);
         System.out.println(hashMap);
 
     }
