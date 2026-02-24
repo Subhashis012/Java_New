@@ -1,6 +1,8 @@
 package Java.test;
 
-public class Student {
+import org.jetbrains.annotations.NotNull;
+
+public class Student implements Comparable<Student> {
 
     public static int count = 0;
 
@@ -48,5 +50,10 @@ public class Student {
 
     public void setGpa(double gpa) {
         this.gpa = gpa;
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        return Double.compare(o.getGpa(), this.getGpa());
     }
 }
